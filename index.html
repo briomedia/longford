@@ -23,6 +23,11 @@ header p { margin:6px 0 0; color:var(--suave); font-size:15px; }
 section { margin-top:48px; }
 section > h2 { font-size:22px; font-weight:700; letter-spacing:-.01em; margin:0 0 6px; }
 section > p { margin:0 0 20px; color:var(--suave); font-size:15px; }
+.lote { margin-top:64px; }
+.lote-tit { display:flex; align-items:baseline; gap:14px; border-bottom:1px solid var(--linea); padding-bottom:12px; }
+.lote-tit h2 { margin:0; font-size:clamp(30px,4vw,40px); font-weight:700; letter-spacing:-.02em; color:var(--oro, #D9A62E); }
+.lote-tit span { color:var(--suave); font-size:15px; }
+.lote section:first-of-type { margin-top:28px; }
 .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
 .pieza { background:var(--card); border:1px solid var(--linea); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; min-width:0; }
 .vista { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; background:#000; max-width:100%; }
@@ -71,13 +76,15 @@ section > p { margin:0 0 20px; color:var(--suave); font-size:15px; }
 <div class="envoltura">
   <header>
     <img src="logo.png" alt="Longford Barber Shop">
-    <div><h1>Contenido de Longford</h1><p>Noviembre · Lote 2</p></div>
+    <div><h1>Contenido de Longford</h1><p>Longford Barber Shop · Brío Media</p></div>
   </header>
   <p class="ayuda">Toca <b>Descargar</b> para guardar cada pieza en su calidad original y <b>Copiar caption</b> para pegar el texto directo en Instagram. En iPhone, el archivo se guarda en la app Archivos: ábrelo y toca Compartir → Guardar imagen o Guardar video.</p>
 
+  <div class="lote" id="lote-2">
+  <div class="lote-tit"><h2>Lote 2</h2><span>2 reels y 5 posts para elegir</span></div>
   <section>
     <h2>Videos</h2>
-    <p>Los reels editados de esta entrega.</p>
+    <p>Los reels editados de este lote.</p>
     <div class="grid">
     <article class="pieza">
       <video class="vista video" src="videos/longford-reel-02-vista.mp4" poster="videos/longford-reel-02-portada.jpg" controls playsinline preload="none"></video>
@@ -199,9 +206,13 @@ El oficio de los barberos, el ritual de la toalla y una casa llena de detalles. 
     </div>
   </section>
 
+  </div>
+
+  <div class="lote" id="lote-1">
+  <div class="lote-tit"><h2>Lote 1</h2><span>Posts</span></div>
   <section>
-    <h2>Entrega anterior</h2>
-    <p>Los posts del primer lote, por si necesitan descargarlos otra vez.</p>
+    <h2>Posts</h2>
+    <p>Por si necesitan descargarlos otra vez.</p>
     <div class="grid">
     <article class="pieza">
       <img class="vista" src="posts/entras-por-el-corte-vista.jpg" alt="Entras por el corte" loading="lazy" width="720" height="900">
@@ -258,6 +269,7 @@ Porque un buen corte no se hace a la carrera.
     </article>
     </div>
   </section>
+  </div>
 </div>
 
 <script>
